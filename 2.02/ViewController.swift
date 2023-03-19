@@ -31,22 +31,23 @@ class ViewController: UIViewController {
     @IBAction func actionButton(_ sender: UIButton) {
         
         semaforButton.setTitle("Next", for: .normal)
-        
-            if redSemaforColor.alpha == 1 {
-                redSemaforColor.alpha = 0.4
-                yellowSemaforColor.alpha = 1
-            }
-            else if yellowSemaforColor.alpha == 1 {
-                yellowSemaforColor.alpha = 0.4
-                greenSemaforColor.alpha = 1
-                
-            }
-            else if greenSemaforColor.alpha == 1 {
-                greenSemaforColor.alpha = 0.4
-                redSemaforColor.alpha = 1
-            }
+        if redSemaforColor.alpha == 1 {
+            yellowSemaforColor.alpha = 1
+            redSemaforColor.alpha = 0.3
+            
+        } else if yellowSemaforColor.alpha == 1 {
+            greenSemaforColor.alpha = 1
+            yellowSemaforColor.alpha = 0.3
+            
+        } else if greenSemaforColor.alpha == 1 {
+            redSemaforColor.alpha = 1
+            greenSemaforColor.alpha = 0.3
+            
+        } else {
+            redSemaforColor.alpha = 1
         }
     }
+}
 
 
     
